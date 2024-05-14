@@ -3,8 +3,14 @@ import numpy as numpy
 import matplotlib.pyplot as plt
 import seaborn as sb
 from imblearn.over_sampling import SMOTE
-from sklearn.metrics import classification_report, confusion_matrix
+from sklearn.model_selection import train_test_split
 from sklearn.tree import DecisionTreeClassifier
+from sklearn.neighbors import KNeighborsClassifier
+from sklearn.neural_network import MLPClassifier
+from sklearn.svm import SVC
+from sklearn.naive_bayes import GaussianNB
+from sklearn.metrics import classification_report, confusion_matrix
+
 
 
 
@@ -81,7 +87,6 @@ all_inputs[:10]
 
 
 
-from sklearn.model_selection import train_test_split
 
 (training_inputs,
  testing_inputs,
@@ -116,7 +121,6 @@ print(classification_report(testing_classes, predictions))
 
 ###### K-NEAREST NEIGHBORS ######
 
-from sklearn.neighbors import KNeighborsClassifier
 
 print("====================================")
 print("K-Nearest Neighbors Classifier")
@@ -138,7 +142,6 @@ print(classification_report(testing_classes, predictions))
 
 ###### NAIVE BAYES ######
 
-from sklearn.naive_bayes import GaussianNB
 
 print("====================================")
 print("Naive Bayes Classifier")
@@ -156,7 +159,6 @@ print(classification_report(testing_classes, predictions))
 
 ###### Support Vector Machines ######
 
-from sklearn.svm import SVC
 
 print("====================================")
 print("Support Vector Machines Classifier")
@@ -173,7 +175,6 @@ print(classification_report(testing_classes, predictions))
 
 ######  Neural Networks ######
 
-from sklearn.neural_network import MLPClassifier
 
 print("====================================")
 print("Neural Networks Classifier")
